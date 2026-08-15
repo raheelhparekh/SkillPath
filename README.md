@@ -1,16 +1,19 @@
-# React + Vite
+# Skillpath Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive, high-performance landing page built for the Skillpath junior developer assignment.
 
-Currently, two official plugins are available:
+## Next Steps & Future Enhancements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+If given more time to extend this project, the next primary enhancement would be **Course Pagination**. While the current API returns a small catalog of 5–10 courses, a production catalog would contain dozens or hundreds. Loading all cards simultaneously hurts performance, increasing Largest Contentful Paint (LCP) and page weight. Implementing pagination—displaying a grid of 6 courses per page with clean "Next" and "Previous" page navigation—would optimize render speeds and prevent UI clutter.
 
-## React Compiler
+Other key improvements would include:
+- **Client-Side Caching**: Storing successfully resolved course lists and country codes in `sessionStorage` to bypass network flakiness on subpage loads.
+- **Unit Tests**: Writing Vitest/React Testing Library suites to assert sorting logic, search filtering, and state degradation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## AI Pair-Programming Collaboration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+This repository was developed in collaboration with **Antigravity**, an agentic AI coding assistant designed by Google DeepMind, powered by the **Gemini 3.5 Flash** model. 
+
+For a complete record of our design discussions, implementation plans, and architecture choices (such as parallel fetches, retry policies, and mounting cleanup hooks), please refer to [ai_convo.md](./ai_convo.md) in this repository.
